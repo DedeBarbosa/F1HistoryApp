@@ -1,0 +1,76 @@
+openapi: 3.0.3
+info:
+  title: f1Api
+  description: f1Api
+  version: 1.0.0
+servers:
+- url: https://ergast.com/api/f1
+tags:
+- name: seasons
+  description: Seasons list
+paths:
+  /seasons.json:
+    get:
+      tags:
+      - seasons
+      summary: Seasons List
+      operationId: everythingGet
+      properties:
+        - limit:
+          type: string
+        - offset:
+          type: string
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MRD'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+components:
+  schemas:
+    MRD:
+      type: object
+      properties:
+        MRData:
+          $ref: '#/components/schemas/MRData'
+    MRData:
+      type: object
+      properties:
+        total:
+          type: string
+        SeasonTable:
+          $ref: '#/components/schemas/SeasonTable'
+    ErrorModel:
+      required:
+      - code
+      - message
+      type: object
+      properties:
+        message:
+          type: string
+        code:
+          maximum: 600
+          minimum: 100
+          type: integer
+    SeasonTable:
+      type: object
+      properties:
+        Seasons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Season'
+    Season:
+      type: object
+      properties:
+        season:
+          type: string
+        url:
+          type: string
+    
