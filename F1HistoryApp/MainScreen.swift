@@ -13,9 +13,14 @@ struct MainScreen: View {
     
     var body: some View {
         VStack{
-            Text("F1 History App").font(.headline)
             Spacer()
             Button("Seasons") {
+                router.listSelection = .seasons
+                router.tabSelection = 1
+            }.foregroundColor(.black)
+            Spacer()
+            Button("Drivers") {
+                router.listSelection = .drivers
                 router.tabSelection = 1
             }.foregroundColor(.black)
             Spacer()

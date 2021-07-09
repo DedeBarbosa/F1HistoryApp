@@ -35,6 +35,7 @@ private struct ScreenStack {
 private struct Screen: Identifiable, Equatable {
     
     let id: String
+    let title: String
     let nextScreen: AnyView
     
     static func == (lhs: Screen, rhs: Screen) -> Bool {
@@ -78,10 +79,10 @@ final class NavControllerViewModel: ObservableObject {
         self.easing = easing
     }
     
-    func push<S: View>(_ screenView: S) {
+    func push<S: View>(_ screenView: S, title: String) {
         withAnimation(easing) {
             navigationType = .push
-            let screen = Screen(id: UUID().uuidString, nextScreen: AnyView(screenView))
+            let screen = Screen(id: UUID().uuidString, title: title, nextScreen: AnyView(screenView))
             screenStack.push(screen)
         }
     }
@@ -108,9 +109,9 @@ public struct NavControllerView<Content>: View where Content: View {
     private let content: Content
     private let transitions: (push: AnyTransition, pop: AnyTransition)
     
-    public init(transition: NavTransition,
+    public init(title: String = "", transition: NavTransition,
                 easing: Animation = .easeOut(duration: 0.33),
-                @ViewBuilder content: @escaping () -> Content, title: String = "") {
+                @ViewBuilder content: @escaping () -> Content) {
         
         viewModel = NavControllerViewModel(easing: easing)
         self.title = title
@@ -134,21 +135,23 @@ public struct NavControllerView<Content>: View where Content: View {
                     if viewModel.currentScreen != nil {
                         NavPopButton(destination: .previous) {
                             Image(systemName: "arrow.backward")
-                                .font(.largeTitle)
+                                .font(.system(size: 24, weight: .bold))
                         }
                         .environmentObject(viewModel)
                     } else {
                         Spacer()
                     }
                     Spacer()
-                    Text(title)
+                    Text(viewModel.currentScreen?.title ?? title)
+                        .font(.system(size: 24, weight: .bold))
                     Spacer()
                     NavPopButton(destination: .root) {
                         Image(systemName: "house")
-                            .font(.largeTitle)
+                            .font(.system(size: 24, weight: .bold))
                     }
                     .environmentObject(viewModel)
-                }.frame(height: 50)
+                }
+                Spacer()
                 ZStack {
                 if isRoot {
                     content
@@ -159,6 +162,7 @@ public struct NavControllerView<Content>: View where Content: View {
                         .transition(viewModel.navigationType == .push ? transitions.push : transitions.pop)
                         .environmentObject(viewModel)
                 }
+                Spacer()
             }
         }
     }
@@ -169,17 +173,21 @@ public struct NavPushButton<Label, Destination>: View where Label: View, Destina
     
     @EnvironmentObject var viewModel: NavControllerViewModel
     
-    private let destination: Destination
+    private let destination: (view: Destination, title: String)
     private let label: () -> Label
     
-    public init(destination: Destination, @ViewBuilder label: @escaping () -> Label) {
-        self.destination = destination
+    public init(destination: Destination, title: String, @ViewBuilder label: @escaping () -> Label) {
+        self.destination = (view: destination, title: title)
         self.label = label
     }
     
     public var body: some View {
         ZStack(alignment: .center) {
-//            Button("", action: { push() })
+            Rectangle()
+                .onTapGesture {
+                    push()
+                }
+                .colorInvert()
             label().onTapGesture {
                 push()
             }
@@ -188,7 +196,7 @@ public struct NavPushButton<Label, Destination>: View where Label: View, Destina
     }
     
     private func push() {
-        viewModel.push(destination)
+        viewModel.push(destination.view, title: destination.title)
     }
     
 }

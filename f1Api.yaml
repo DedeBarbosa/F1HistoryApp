@@ -10,11 +10,13 @@ tags:
   description: Seasons list
 - name: seasonStages
   description: Season stages
+- name: drivers
+  description: DriversList
 paths:
   /{year}.json:
     get:
       tags:
-          - seasonStages
+      - seasonStages
       summary: Gets a season stages by year.
       operationId: getSeasonByYear
       parameters:
@@ -37,12 +39,12 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ErrorModel'
-  /seasons.json:
+  /drivers.json:
     get:
       tags:
-      - seasons
-      summary: Seasons List
-      operationId: everythingGet
+        - drivers
+      summary: Drivers List
+      operationId: driversGet
       parameters:
       - name: limit
         in: query
@@ -52,13 +54,34 @@ paths:
         in: query
         schema:
           type: string
-      - in: header
-        name: format
+      responses:
+        "200":
+          description: success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MRD'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
+  /seasons.json:
+    get:
+      tags:
+      - seasons
+      summary: Seasons List
+      operationId: seasonsGet
+      parameters:
+      - name: limit
+        in: query
         schema:
-          default: json
-          enum:
-            - json
-            - xml
+          type: string
+      - name: offset
+        in: query
+        schema:
+          type: string
       responses:
         "200":
           description: success
@@ -88,6 +111,8 @@ components:
           $ref: '#/components/schemas/SeasonTable'
         RaceTable:
           $ref: '#/components/schemas/RaceTable'
+        DriverTable:
+          $ref: '#/components/schemas/DriverTable'
     ErrorModel:
       required:
       - code
@@ -130,6 +155,8 @@ components:
           type: string
         raceName:
           type: string
+        season:
+          type: string
         date:
           type: string
         Circuit:
@@ -156,5 +183,26 @@ components:
           type: string
         country:
           type: string
-    
-    
+    DriverTable:
+      type: object
+      properties:
+        Drivers:
+          type: array
+          items:
+            $ref: '#/components/schemas/Driver'
+    Driver:
+      type: object
+      properties:
+        driverId:
+          type: string
+        url:
+          type: string
+        givenName:
+          type: string
+        familyName:
+          type: string
+        dateOfBirth:
+          type: string
+        nationality:
+          type: string
+            

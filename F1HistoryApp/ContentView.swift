@@ -8,8 +8,18 @@
 import SwiftUI
 import UIComponents
 
+enum ListMode: String {
+    case seasons = "Seasons List"
+    case drivers = "Drivers List"
+}
+
 final class Router: ObservableObject {
     @Published var tabSelection: Int = 0
+    @Published var listSelection: ListMode = .seasons
+    
+    var selectedListName: String {
+        listSelection.rawValue
+    }
 }
 
 struct ContentView: View {
@@ -19,7 +29,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             TabView(selection: $router.tabSelection) {
-                NavControllerView(transition: .custom(.move(edge: .trailing))) {
+                NavControllerView(title: "Main screen", transition: .custom(.move(edge: .trailing))) {
                     LazyView(MainScreen())
                 }
                 .tabItem {
@@ -27,9 +37,15 @@ struct ContentView: View {
                     Text("Main")
                 }
                 .tag(0)
-                NavControllerView(transition: .custom(.move(edge: .trailing))) {
-                    LazyView(SeasonsScreen())
-                        .navigationTitle("F1 Seasons From 1950")
+                NavControllerView(title: router.selectedListName, transition: .custom(.move(edge: .trailing))) {
+                    switch router.listSelection {
+                    case .seasons:
+                        LazyView(SeasonsScreen())
+                            .navigationTitle("F1 Seasons From 1950")
+                    case .drivers:
+                        LazyView(DriversScreen())
+                            .navigationTitle("F1 Seasons From 1950")
+                    }
                 }
                 .navigationBarTitleDisplayMode(.large)
                 .tabItem {

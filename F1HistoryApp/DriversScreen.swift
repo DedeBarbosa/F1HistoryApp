@@ -1,8 +1,8 @@
 //
-//  ContentView.swift
-//  DumaGov
+//  DriversScreen.swift
+//  F1HistoryApp
 //
-//  Created by Dmitry Pavlov on 07.07.2021.
+//  Created by Dmitry Pavlov on 09.07.2021.
 //
 
 import SwiftUI
@@ -10,8 +10,8 @@ import Networking
 import  UIComponents
 
 
-final class SeasonsListViewModel: ObservableObject {
-    @Published private(set) var seasons: [Season] = .init()
+final class DriversListViewModel: ObservableObject {
+    @Published private(set) var drivers: [Driver] = .init()
     @Published private(set) var isPageLoading = false
     
     private(set) var offset = 0
@@ -28,8 +28,8 @@ final class SeasonsListViewModel: ObservableObject {
             return
         }
         isPageLoading = true
-        SeasonsAPI.seasonsGet(limit: "\(showBy)", offset: "\(offset)") { data, err in
-            self.seasons.append(contentsOf: data?.mRData?.seasonTable?.seasons ?? .init())
+        DriversAPI.driversGet(limit: "\(showBy)", offset: "\(offset)") { data, err in
+            self.drivers.append(contentsOf: data?.mRData?.driverTable?.drivers ?? .init())
             self.maxItems = Int(data?.mRData?.total ?? "") ?? 0
             
             if self.offset + self.showBy > self.maxItems {
@@ -42,8 +42,8 @@ final class SeasonsListViewModel: ObservableObject {
     }
 }
 
-struct SeasonsScreen: View {
-    @ObservedObject var viewModel = SeasonsListViewModel()
+struct DriversScreen: View {
+    @ObservedObject var viewModel = DriversListViewModel()
     
     var body: some View {
         list
@@ -52,52 +52,50 @@ struct SeasonsScreen: View {
     @State private var selection: String? = nil
     
     var list: some View {
-        List(viewModel.seasons, id: \.self) { item in
-            SeasonScreenCell(item: item)
+        List(viewModel.drivers, id: \.self) { item in
+            DriverScreenCell(item: item)
                 .environmentObject(viewModel)
         }
     }
 }
 
-struct SeasonScreenCell: View {
+struct DriverScreenCell: View {
     
-    @EnvironmentObject var viewModel: SeasonsListViewModel
-    var item: Season
+    @EnvironmentObject var viewModel: DriversListViewModel
+    var item: Driver
+    
     
     var body: some View {
         VStack(alignment: .center, spacing: .none) {
             if let url = URL(string: item.url ?? "") {
                 HStack {
-                    if let season = item.season {
-                        let viewModel = StagesScreenViewModel(with: season)
-                        NavPushButton(destination: LazyView(StagesScreen(viewModel: viewModel)), title: "Stages of season \(season)") {
-                            Text(item.season ?? "")
-                        }
+                    NavPushButton(destination: LazyView(DriverInfoScreen(driver: item)), title: "Driver info") {
+                        Text(item.driverName)
                     }
-                    Spacer()
+                    Divider()
                     ZStack {
-                        NavPushButton(destination: LazyView(WebViewScreen(title: item.season ?? "", url: url)), title: "Wiki of season \(item.season ?? "")") {
+                        NavPushButton(destination: LazyView(WebViewScreen(title: item.driverName, url: url)), title: "Wiki of \(item.driverName)") {
                             Image(systemName: "w.circle")
-                        }
+                        }.frame(width: 100)
                     }
                 }
             } else {
-                Text(item.season ?? "")
+                Text(item.driverName)
             }
-            if viewModel.isPageLoading && viewModel.seasons.last == item {
+            if viewModel.isPageLoading && viewModel.drivers.last == item {
                 Divider()
                 ProgressView("loading...")
             }
         }
         .onAppear() {
-            if viewModel.seasons.last == item {
+            if viewModel.drivers.last == item {
                 viewModel.loadItems()
             }
         }
     }
 }
 
-struct SeasonsScreen_Previews: PreviewProvider {
+struct DriversScreen_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }

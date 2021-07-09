@@ -83,7 +83,7 @@ struct StagesScreenCell: View {
                             ))
                         NavPushButton(destination: LazyView(CircuitScreen(
                                                                 circuit: circuit,
-                                                                region: region))) {
+                                                                region: region)), title: "Circuit info") {
                             Text(item.circuit?.circuitName ?? "")
                         }
                     } else {
@@ -91,7 +91,7 @@ struct StagesScreenCell: View {
                     }
                     Spacer()
                     ZStack {
-                        NavPushButton(destination: WebViewScreen(title: item.raceName ?? "", url: url)) {
+                        NavPushButton(destination: WebViewScreen(title: item.raceName ?? "", url: url), title: "Wiki of \(item.raceName ?? "") - \(item.season ?? "")") {
                             Image(systemName: "w.circle")
                         }
                     }
@@ -110,7 +110,6 @@ struct StagesScreenCell: View {
         }
     }
 }
-
 
 struct StagesScreen_Previews: PreviewProvider {
     static var previews: some View {
