@@ -11,11 +11,13 @@ open class SeasonsAPI {
     /**
      Seasons List
      
+     - parameter limit: (query)  (optional)
+     - parameter offset: (query)  (optional)
      - parameter apiResponseQueue: The queue on which api response is dispatched.
      - parameter completion: completion handler to receive the data and the error objects
      */
-    open class func everythingGet(apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: MRD?, _ error: Error?) -> Void)) {
-        everythingGetWithRequestBuilder().execute(apiResponseQueue) { result -> Void in
+    open class func seasonsGet(limit: String? = nil, offset: String? = nil, apiResponseQueue: DispatchQueue = OpenAPIClientAPI.apiResponseQueue, completion: @escaping ((_ data: MRD?, _ error: Error?) -> Void)) {
+        seasonsGetWithRequestBuilder(limit: limit, offset: offset).execute(apiResponseQueue) { result -> Void in
             switch result {
             case let .success(response):
                 completion(response.body, nil)
@@ -28,14 +30,20 @@ open class SeasonsAPI {
     /**
      Seasons List
      - GET /seasons.json
+     - parameter limit: (query)  (optional)
+     - parameter offset: (query)  (optional)
      - returns: RequestBuilder<MRD> 
      */
-    open class func everythingGetWithRequestBuilder() -> RequestBuilder<MRD> {
+    open class func seasonsGetWithRequestBuilder(limit: String? = nil, offset: String? = nil) -> RequestBuilder<MRD> {
         let path = "/seasons.json"
         let URLString = OpenAPIClientAPI.basePath + path
         let parameters: [String: Any]? = nil
 
-        let urlComponents = URLComponents(string: URLString)
+        var urlComponents = URLComponents(string: URLString)
+        urlComponents?.queryItems = APIHelper.mapValuesToQueryItems([
+            "limit": limit?.encodeToJSON(),
+            "offset": offset?.encodeToJSON(),
+        ])
 
         let nillableHeaders: [String: Any?] = [
             :

@@ -1,11 +1,11 @@
     import XCTest
-    @testable import WikiNetworking
+    @testable import Networking
 
-    final class WikiNetworkingTests: XCTestCase {
+    final class NetworkingTests: XCTestCase {
         func testExample() {
             // This is an example of a functional test case.
             // Use XCTAssert and related functions to verify your tests produce the correct
             // results.
-            XCTAssertEqual(WikiNetworking().text, "Hello, World!")
+            XCTAssertEqual(Networking().text, "Hello, World!")
         }
     }

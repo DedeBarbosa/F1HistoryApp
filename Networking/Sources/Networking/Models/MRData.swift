@@ -12,14 +12,20 @@ public struct MRData: Codable, Hashable {
 
     public var total: String?
     public var seasonTable: SeasonTable?
+    public var raceTable: RaceTable?
+    public var driverTable: DriverTable?
 
-    public init(total: String? = nil, seasonTable: SeasonTable? = nil) {
+    public init(total: String? = nil, seasonTable: SeasonTable? = nil, raceTable: RaceTable? = nil, driverTable: DriverTable? = nil) {
         self.total = total
         self.seasonTable = seasonTable
+        self.raceTable = raceTable
+        self.driverTable = driverTable
     }
     public enum CodingKeys: String, CodingKey, CaseIterable {
         case total
         case seasonTable = "SeasonTable"
+        case raceTable = "RaceTable"
+        case driverTable = "DriverTable"
     }
 
     // Encodable protocol methods
@@ -28,6 +34,8 @@ public struct MRData: Codable, Hashable {
         var container = encoder.container(keyedBy: CodingKeys.self)
         try container.encodeIfPresent(total, forKey: .total)
         try container.encodeIfPresent(seasonTable, forKey: .seasonTable)
+        try container.encodeIfPresent(raceTable, forKey: .raceTable)
+        try container.encodeIfPresent(driverTable, forKey: .driverTable)
     }
 
 
