@@ -8,18 +8,57 @@ servers:
 tags:
 - name: seasons
   description: Seasons list
+- name: seasonStages
+  description: Season stages
 paths:
+  /{year}.json:
+    get:
+      tags:
+          - seasonStages
+      summary: Gets a season stages by year.
+      operationId: getSeasonByYear
+      parameters:
+        - name: year
+          in: path
+          description: Season Year Stages
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MRD'
+        default:
+          description: enexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorModel'
   /seasons.json:
     get:
       tags:
       - seasons
       summary: Seasons List
       operationId: everythingGet
-      properties:
-        - limit:
+      parameters:
+      - name: limit
+        in: query
+        schema:
           type: string
-        - offset:
+      - name: offset
+        in: query
+        schema:
           type: string
+      - in: header
+        name: format
+        schema:
+          default: json
+          enum:
+            - json
+            - xml
       responses:
         "200":
           description: success
@@ -47,6 +86,8 @@ components:
           type: string
         SeasonTable:
           $ref: '#/components/schemas/SeasonTable'
+        RaceTable:
+          $ref: '#/components/schemas/RaceTable'
     ErrorModel:
       required:
       - code
@@ -73,4 +114,47 @@ components:
           type: string
         url:
           type: string
+    RaceTable:
+      type: object
+      properties:
+        Races:
+          type: array
+          items:
+            $ref: '#/components/schemas/Race'
+    Race:
+      type: object
+      properties:
+        round:
+          type: string
+        url:
+          type: string
+        raceName:
+          type: string
+        date:
+          type: string
+        Circuit:
+          $ref: '#/components/schemas/Circuit'
+    Circuit:
+      type: object
+      properties:
+        circuitId:
+          type: string
+        url:
+          type: string
+        circuitName:
+          type: string
+        Location:
+          $ref: '#/components/schemas/Location'
+    Location:
+      type: object
+      properties:
+        lat:
+          type: string
+        long:
+          type: string
+        locality:
+          type: string
+        country:
+          type: string
+    
     

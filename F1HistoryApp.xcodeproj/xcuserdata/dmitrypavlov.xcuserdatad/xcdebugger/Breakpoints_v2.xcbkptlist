@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "6874E4EE-3A59-431C-9F7F-6B9C13CBCF63"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F41671C6-68B9-414E-A9AD-FB71507E058D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WikiNetworking/Sources/WikiNetworking/APIs/SeasonsAPI.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "everythingGet(apiResponseQueue:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E2F5ED5B-7514-4157-8A9C-4CF6F145ABF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WikiNetworking/Sources/WikiNetworking/CodableHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "CodableHelper"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02B2AD0B-520B-4267-9601-FBADEE1921FA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WikiApp/WebView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "makeUIView(context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97FAC1CC-393C-4715-98C2-293FAA5E8E1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WikiApp/WebView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "660FBBB6-71A5-41F6-A2D3-F19114D382CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WikiApp/ListScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "loadItems()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B9FC908E-22D8-4A5F-8871-0AE2A7D84509"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/ListScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B9FC908E-22D8-4A5F-8871-0AE2A7D84509 - b5484434de40151c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;)&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.ListCell.body.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ListScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "87"
+                  endingLineNumber = "87"
+                  offsetFromSymbolStart = "398">
+               </Location>
+               <Location
+                  uuid = "B9FC908E-22D8-4A5F-8871-0AE2A7D84509 - 74f7f9707bfb57d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleView&lt;(UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;)&gt;&gt;)&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Image, UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.WebViewScreen&gt;)&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.ListCell.body.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ListScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "114">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AC667997-38B5-4813-8166-1CA277ABBE68"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/WebView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD3565EF-C86B-48A5-A017-6DDA9F5D0B97"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/WebView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AD96665-06DF-475B-BBC5-D70260838E75"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/SeasonsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "list"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7AD96665-06DF-475B-BBC5-D70260838E75 - c48277d722a3e5d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.SeasonsScreen.list.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "33">
+               </Location>
+               <Location
+                  uuid = "7AD96665-06DF-475B-BBC5-D70260838E75 - 66e0db85c580e44c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Networking.Season) -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in F1HistoryApp.SeasonsScreen.list.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "62">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/SeasonsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93 - a9a4fdcc95f4a387"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.StagesScreen&gt;&gt;, SwiftUI.Spacer, SwiftUI.ZStack&lt;UIComponents.NavPushButton&lt;SwiftUI.Image, F1HistoryApp.WebViewScreen&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.SeasonScreenCell.body.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "1168">
+               </Location>
+               <Location
+                  uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93 - a9a4fdcc95f4a387"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.StagesScreen&gt;&gt;, SwiftUI.Spacer, SwiftUI.ZStack&lt;UIComponents.NavPushButton&lt;SwiftUI.Image, F1HistoryApp.WebViewScreen&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.SeasonScreenCell.body.getter : some"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "4625">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B3C20C8D-C816-4031-BAD8-F18755D7DDBB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/StagesScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loadItems()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

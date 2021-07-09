@@ -7,32 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0F60C3AE2695E64B00983507 /* WikiNetworking in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60C3AD2695E64B00983507 /* WikiNetworking */; };
-		0F60C3B12695EA7F00983507 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 0F60C3B02695EA7F00983507 /* AnyCodable */; };
+		0F410B462698699100436CF8 /* AnyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F410B442698699100436CF8 /* AnyTransition.swift */; };
+		0F410B472698699100436CF8 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F410B452698699100436CF8 /* View.swift */; };
+		0F410B492698755500436CF8 /* CircuitScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F410B482698755500436CF8 /* CircuitScreen.swift */; };
 		0F60C3B426962E3500983507 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F60C3B326962E3500983507 /* WebView.swift */; };
-		0F9736E72695E3FA00E9BAF2 /* WikiAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736E62695E3FA00E9BAF2 /* WikiAppApp.swift */; };
+		0F8D4A8E26985D670024B596 /* StagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D4A8D26985D670024B596 /* StagesScreen.swift */; };
+		0F8D4A952698644A0024B596 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8D4A942698644A0024B596 /* Networking */; };
+		0F8D4A98269864930024B596 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8D4A97269864930024B596 /* AnyCodable */; };
+		0F9736E72695E3FA00E9BAF2 /* F1HistoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736E62695E3FA00E9BAF2 /* F1HistoryApp.swift */; };
 		0F9736E92695E3FA00E9BAF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736E82695E3FA00E9BAF2 /* ContentView.swift */; };
 		0F9736EB2695E3FD00E9BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9736EA2695E3FD00E9BAF2 /* Assets.xcassets */; };
 		0F9736EE2695E3FD00E9BAF2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9736ED2695E3FD00E9BAF2 /* Preview Assets.xcassets */; };
 		0F9736FE2695E4EE00E9BAF2 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736FB2695E4EE00E9BAF2 /* AboutScreen.swift */; };
-		0F9736FF2695E4EE00E9BAF2 /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736FC2695E4EE00E9BAF2 /* ListScreen.swift */; };
+		0F9736FF2695E4EE00E9BAF2 /* SeasonsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736FC2695E4EE00E9BAF2 /* SeasonsScreen.swift */; };
 		0F9737002695E4EE00E9BAF2 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736FD2695E4EE00E9BAF2 /* MainScreen.swift */; };
+		0FFF49EE2696F4520007FB24 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 0FFF49ED2696F4520007FB24 /* UIComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0F60C3A92695E62900983507 /* WikiNetworking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WikiNetworking; sourceTree = "<group>"; };
+		0F410B442698699100436CF8 /* AnyTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyTransition.swift; sourceTree = "<group>"; };
+		0F410B452698699100436CF8 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		0F410B482698755500436CF8 /* CircuitScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitScreen.swift; sourceTree = "<group>"; };
 		0F60C3B2269625D300983507 /* f1Api.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = f1Api.yaml; sourceTree = "<group>"; };
 		0F60C3B326962E3500983507 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		0F9736E32695E3FA00E9BAF2 /* WikiApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F9736E62695E3FA00E9BAF2 /* WikiAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiAppApp.swift; sourceTree = "<group>"; };
+		0F8D4A8D26985D670024B596 /* StagesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesScreen.swift; sourceTree = "<group>"; };
+		0F9736E32695E3FA00E9BAF2 /* F1HistoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1HistoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F9736E62695E3FA00E9BAF2 /* F1HistoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1HistoryApp.swift; sourceTree = "<group>"; };
 		0F9736E82695E3FA00E9BAF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0F9736EA2695E3FD00E9BAF2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F9736ED2695E3FD00E9BAF2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0F9736EF2695E3FD00E9BAF2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F9736FA2695E47D00E9BAF2 /* genarate.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = genarate.sh; sourceTree = "<group>"; };
 		0F9736FB2695E4EE00E9BAF2 /* AboutScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
-		0F9736FC2695E4EE00E9BAF2 /* ListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		0F9736FC2695E4EE00E9BAF2 /* SeasonsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeasonsScreen.swift; sourceTree = "<group>"; };
 		0F9736FD2695E4EE00E9BAF2 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		0FFF49E92696F33C0007FB24 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Networking; sourceTree = "<group>"; };
+		0FFF49EA2696F3620007FB24 /* UIComponents */ = {isa = PBXFileReference; lastKnownFileType = folder; path = UIComponents; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,21 +50,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F60C3B12695EA7F00983507 /* AnyCodable in Frameworks */,
-				0F60C3AE2695E64B00983507 /* WikiNetworking in Frameworks */,
+				0F8D4A952698644A0024B596 /* Networking in Frameworks */,
+				0F8D4A98269864930024B596 /* AnyCodable in Frameworks */,
+				0FFF49EE2696F4520007FB24 /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F410B432698698600436CF8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0F410B442698699100436CF8 /* AnyTransition.swift */,
+				0F410B452698699100436CF8 /* View.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0F9736DA2695E3FA00E9BAF2 = {
 			isa = PBXGroup;
 			children = (
+				0F410B432698698600436CF8 /* Extensions */,
+				0FFF49EA2696F3620007FB24 /* UIComponents */,
+				0FFF49E92696F33C0007FB24 /* Networking */,
 				0F60C3B2269625D300983507 /* f1Api.yaml */,
-				0F60C3A92695E62900983507 /* WikiNetworking */,
 				0F9736FA2695E47D00E9BAF2 /* genarate.sh */,
-				0F9736E52695E3FA00E9BAF2 /* WikiApp */,
+				0F9736E52695E3FA00E9BAF2 /* F1HistoryApp */,
 				0F9736E42695E3FA00E9BAF2 /* Products */,
 				0F9737012695E52C00E9BAF2 /* Frameworks */,
 			);
@@ -63,25 +85,27 @@
 		0F9736E42695E3FA00E9BAF2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0F9736E32695E3FA00E9BAF2 /* WikiApp.app */,
+				0F9736E32695E3FA00E9BAF2 /* F1HistoryApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0F9736E52695E3FA00E9BAF2 /* WikiApp */ = {
+		0F9736E52695E3FA00E9BAF2 /* F1HistoryApp */ = {
 			isa = PBXGroup;
 			children = (
-				0F9736E62695E3FA00E9BAF2 /* WikiAppApp.swift */,
+				0F9736E62695E3FA00E9BAF2 /* F1HistoryApp.swift */,
 				0F9736E82695E3FA00E9BAF2 /* ContentView.swift */,
 				0F9736FB2695E4EE00E9BAF2 /* AboutScreen.swift */,
-				0F9736FC2695E4EE00E9BAF2 /* ListScreen.swift */,
+				0F9736FC2695E4EE00E9BAF2 /* SeasonsScreen.swift */,
+				0F8D4A8D26985D670024B596 /* StagesScreen.swift */,
 				0F9736FD2695E4EE00E9BAF2 /* MainScreen.swift */,
+				0F410B482698755500436CF8 /* CircuitScreen.swift */,
 				0F60C3B326962E3500983507 /* WebView.swift */,
 				0F9736EA2695E3FD00E9BAF2 /* Assets.xcassets */,
 				0F9736EF2695E3FD00E9BAF2 /* Info.plist */,
 				0F9736EC2695E3FD00E9BAF2 /* Preview Content */,
 			);
-			path = WikiApp;
+			path = F1HistoryApp;
 			sourceTree = "<group>";
 		};
 		0F9736EC2695E3FD00E9BAF2 /* Preview Content */ = {
@@ -102,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0F9736E22695E3FA00E9BAF2 /* WikiApp */ = {
+		0F9736E22695E3FA00E9BAF2 /* F1HistoryApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0F9736F22695E3FD00E9BAF2 /* Build configuration list for PBXNativeTarget "WikiApp" */;
+			buildConfigurationList = 0F9736F22695E3FD00E9BAF2 /* Build configuration list for PBXNativeTarget "F1HistoryApp" */;
 			buildPhases = (
 				0F9736DF2695E3FA00E9BAF2 /* Sources */,
 				0F9736E02695E3FA00E9BAF2 /* Frameworks */,
@@ -114,13 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = WikiApp;
+			name = F1HistoryApp;
 			packageProductDependencies = (
-				0F60C3AD2695E64B00983507 /* WikiNetworking */,
-				0F60C3B02695EA7F00983507 /* AnyCodable */,
+				0FFF49ED2696F4520007FB24 /* UIComponents */,
+				0F8D4A942698644A0024B596 /* Networking */,
+				0F8D4A97269864930024B596 /* AnyCodable */,
 			);
 			productName = WikiApp;
-			productReference = 0F9736E32695E3FA00E9BAF2 /* WikiApp.app */;
+			productReference = 0F9736E32695E3FA00E9BAF2 /* F1HistoryApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -137,7 +162,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0F9736DE2695E3FA00E9BAF2 /* Build configuration list for PBXProject "WikiApp" */;
+			buildConfigurationList = 0F9736DE2695E3FA00E9BAF2 /* Build configuration list for PBXProject "F1HistoryApp" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -147,13 +172,13 @@
 			);
 			mainGroup = 0F9736DA2695E3FA00E9BAF2;
 			packageReferences = (
-				0F60C3AF2695EA7F00983507 /* XCRemoteSwiftPackageReference "AnyCodable" */,
+				0F8D4A96269864930024B596 /* XCRemoteSwiftPackageReference "AnyCodable" */,
 			);
 			productRefGroup = 0F9736E42695E3FA00E9BAF2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0F9736E22695E3FA00E9BAF2 /* WikiApp */,
+				0F9736E22695E3FA00E9BAF2 /* F1HistoryApp */,
 			);
 		};
 /* End PBXProject section */
@@ -175,12 +200,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F8D4A8E26985D670024B596 /* StagesScreen.swift in Sources */,
+				0F410B492698755500436CF8 /* CircuitScreen.swift in Sources */,
+				0F410B462698699100436CF8 /* AnyTransition.swift in Sources */,
 				0F9736E92695E3FA00E9BAF2 /* ContentView.swift in Sources */,
-				0F9736E72695E3FA00E9BAF2 /* WikiAppApp.swift in Sources */,
+				0F9736E72695E3FA00E9BAF2 /* F1HistoryApp.swift in Sources */,
 				0F9737002695E4EE00E9BAF2 /* MainScreen.swift in Sources */,
+				0F410B472698699100436CF8 /* View.swift in Sources */,
 				0F60C3B426962E3500983507 /* WebView.swift in Sources */,
 				0F9736FE2695E4EE00E9BAF2 /* AboutScreen.swift in Sources */,
-				0F9736FF2695E4EE00E9BAF2 /* ListScreen.swift in Sources */,
+				0F9736FF2695E4EE00E9BAF2 /* SeasonsScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +338,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WikiApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"F1HistoryApp/Preview Content\"";
 				DEVELOPMENT_TEAM = HZK8963RGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WikiApp/Info.plist;
+				INFOPLIST_FILE = F1HistoryApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -331,10 +360,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"WikiApp/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"F1HistoryApp/Preview Content\"";
 				DEVELOPMENT_TEAM = HZK8963RGN;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = WikiApp/Info.plist;
+				INFOPLIST_FILE = F1HistoryApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -350,7 +379,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0F9736DE2695E3FA00E9BAF2 /* Build configuration list for PBXProject "WikiApp" */ = {
+		0F9736DE2695E3FA00E9BAF2 /* Build configuration list for PBXProject "F1HistoryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F9736F02695E3FD00E9BAF2 /* Debug */,
@@ -359,7 +388,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0F9736F22695E3FD00E9BAF2 /* Build configuration list for PBXNativeTarget "WikiApp" */ = {
+		0F9736F22695E3FD00E9BAF2 /* Build configuration list for PBXNativeTarget "F1HistoryApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0F9736F32695E3FD00E9BAF2 /* Debug */,
@@ -371,9 +400,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0F60C3AF2695EA7F00983507 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
+		0F8D4A96269864930024B596 /* XCRemoteSwiftPackageReference "AnyCodable" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Flight-School/AnyCodable";
+			repositoryURL = "https://github.com/Flight-School/AnyCodable.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.6.1;
@@ -382,14 +411,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0F60C3AD2695E64B00983507 /* WikiNetworking */ = {
+		0F8D4A942698644A0024B596 /* Networking */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = WikiNetworking;
+			productName = Networking;
 		};
-		0F60C3B02695EA7F00983507 /* AnyCodable */ = {
+		0F8D4A97269864930024B596 /* AnyCodable */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0F60C3AF2695EA7F00983507 /* XCRemoteSwiftPackageReference "AnyCodable" */;
+			package = 0F8D4A96269864930024B596 /* XCRemoteSwiftPackageReference "AnyCodable" */;
 			productName = AnyCodable;
+		};
+		0FFF49ED2696F4520007FB24 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

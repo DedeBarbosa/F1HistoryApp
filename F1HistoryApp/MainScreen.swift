@@ -12,8 +12,13 @@ struct MainScreen: View {
     @EnvironmentObject var router: Router
     
     var body: some View {
-        Button("Go To List") {
-            router.tabSelection = 1
+        VStack{
+            Text("F1 History App").font(.headline)
+            Spacer()
+            Button("Seasons") {
+                router.tabSelection = 1
+            }.foregroundColor(.black)
+            Spacer()
         }
     }
 }
