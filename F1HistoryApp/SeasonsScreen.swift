@@ -7,7 +7,7 @@
 
 import SwiftUI
 import Networking
-import  UIComponents
+import UIComponents
 
 
 final class SeasonsListViewModel: ObservableObject {
@@ -17,17 +17,13 @@ final class SeasonsListViewModel: ObservableObject {
     private(set) var offset = 0
     
     private var showBy = 30
-    private var maxItems = -1
+    private(set) var maxItems = -1
     
     init() {
         loadItems()
     }
     
-    func loadItems() {
-        if isPageLoading {
-            return
-        }
-        isPageLoading = true
+    fileprivate func GetItems(_ callBack: (()->())? = nil) {
         SeasonsAPI.seasonsGet(limit: "\(showBy)", offset: "\(offset)") { data, err in
             self.seasons.append(contentsOf: data?.mRData?.seasonTable?.seasons ?? .init())
             self.maxItems = Int(data?.mRData?.total ?? "") ?? 0
@@ -37,24 +33,58 @@ final class SeasonsListViewModel: ObservableObject {
             } else {
                 self.offset += self.showBy
             }
+            callBack?()
+        }
+    }
+    
+    func loadItems() {
+        if isPageLoading {
+            return
+        }
+        isPageLoading = true
+        GetItems() {
             self.isPageLoading = false
+        }
+    }
+    
+    func loadAll(_ callback: (()->())?) {
+        GetItems() {
+            if self.offset != self.maxItems {
+                self.loadAll(callback)
+            } else {
+                callback?()
+            }
         }
     }
 }
 
 struct SeasonsScreen: View {
     @ObservedObject var viewModel = SeasonsListViewModel()
+    @EnvironmentObject var router: Router
     
     var body: some View {
-        list
+        if viewModel.maxItems < 0 {
+            ProgressView("loading...")
+        } else {
+            list
+        }
     }
     
     @State private var selection: String? = nil
     
     var list: some View {
-        List(viewModel.seasons, id: \.self) { item in
-            SeasonScreenCell(item: item)
-                .environmentObject(viewModel)
+        ScrollViewReader { proxy in
+            ScrollView {
+                ForEach(viewModel.seasons, id: \.self) { item in
+                    SeasonScreenCell(activeLink: router.randomSeason?.season.season == item.season, item: item)
+                        .id(item)
+                        .environmentObject(viewModel)
+                }
+            }.onAppear {
+                if let season = router.randomSeason?.season {
+                    proxy.scrollTo(season)
+                }
+            }
         }
     }
 }
@@ -62,36 +92,41 @@ struct SeasonsScreen: View {
 struct SeasonScreenCell: View {
     
     @EnvironmentObject var viewModel: SeasonsListViewModel
+    @EnvironmentObject var router: Router
+    @State var activeLink = false
+    
     var item: Season
     
     var body: some View {
         VStack(alignment: .center, spacing: .none) {
-            if let url = URL(string: item.url ?? "") {
-                HStack {
-                    if let season = item.season {
-                        let viewModel = StagesScreenViewModel(with: season)
-                        NavPushButton(destination: LazyView(StagesScreen(viewModel: viewModel)), title: "Stages of season \(season)") {
-                            Text(item.season ?? "")
-                        }
+            if let season = item.season {
+                let viewModel = StagesScreenViewModel(with: season)
+                NavigationLink(destination: LazyView(StagesScreen(viewModel: viewModel)).navigationTitle("Stages of \(season)"), isActive: $activeLink) {
+                    VStack {
+                        Text(item.season ?? "no year")
+                            .foregroundColor(.black)
+                        Divider()
                     }
-                    Spacer()
-                    ZStack {
-                        NavPushButton(destination: LazyView(WebViewScreen(title: item.season ?? "", url: url)), title: "Wiki of season \(item.season ?? "")") {
-                            Image(systemName: "w.circle")
-                        }
+                        
+                }.onChange(of: router.tabSelection, perform: { (_) in
+                    if router.randomSeason == nil {
+                        activeLink = false
+                    } else if item == router.randomSeason?.season {
+                        self.activeLink = true
+                        router.randomSeason = nil
                     }
+                    
+                }).onAppear() {
+                    if self.viewModel.seasons.last == item && self.viewModel.offset != self.viewModel.maxItems {
+                        self.viewModel.loadItems()
+                    }
+                }.onDisappear() {
+                    router.randomSeason = nil
                 }
-            } else {
-                Text(item.season ?? "")
             }
             if viewModel.isPageLoading && viewModel.seasons.last == item {
                 Divider()
                 ProgressView("loading...")
-            }
-        }
-        .onAppear() {
-            if viewModel.seasons.last == item {
-                viewModel.loadItems()
             }
         }
     }

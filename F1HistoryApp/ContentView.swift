@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UIComponents
+import Networking
 
 enum ListMode: String {
     case seasons = "Seasons List"
@@ -15,10 +16,11 @@ enum ListMode: String {
 
 final class Router: ObservableObject {
     @Published var tabSelection: Int = 0
-    @Published var listSelection: ListMode = .seasons
+    @Published var randomSeason: RandomSeason? = nil
     
-    var selectedListName: String {
-        listSelection.rawValue
+    struct RandomSeason: Equatable {
+        let season: Season
+        let index: Int
     }
 }
 
@@ -29,32 +31,22 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             TabView(selection: $router.tabSelection) {
-                NavControllerView(title: "Main screen", transition: .custom(.move(edge: .trailing))) {
-                    LazyView(MainScreen())
-                }
+                LazyView(MainScreen())
                 .tabItem {
                     Image(systemName: "house")
                     Text("Main")
                 }
                 .tag(0)
-                NavControllerView(title: router.selectedListName, transition: .custom(.move(edge: .trailing))) {
-                    switch router.listSelection {
-                    case .seasons:
-                        LazyView(SeasonsScreen())
-                            .navigationTitle("F1 Seasons From 1950")
-                    case .drivers:
-                        LazyView(DriversScreen())
-                            .navigationTitle("F1 Seasons From 1950")
-                    }
+                NavigationView() {
+                    LazyView(SeasonsScreen().navigationTitle("SeasonsList"))
                 }
-                .navigationBarTitleDisplayMode(.large)
                 .tabItem {
                     Image(systemName: "list.bullet")
-                    Text("List")
+                    Text("Seasons List")
                 }
                 .tag(1)
-                NavControllerView(transition: .custom(.move(edge: .leading))) {
-                    LazyView(AboutScreen())
+                NavigationView() {
+                    LazyView(AboutScreen()).navigationTitle("About")
                 }
                 .tabItem {
                     Image(systemName: "questionmark.circle")

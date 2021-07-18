@@ -11,19 +11,26 @@ struct MainScreen: View {
     
     @EnvironmentObject var router: Router
     
+    @State var progressIsVisible = false
+    
     var body: some View {
         VStack{
             Spacer()
-            Button("Seasons") {
-                router.listSelection = .seasons
-                router.tabSelection = 1
+            Button("Random season") {
+                self.progressIsVisible = true
+                let vm = SeasonsListViewModel()
+                vm.loadAll() {
+                    progressIsVisible = false
+                    if let seasonIndex = vm.seasons.indices.randomElement() {
+                        router.randomSeason = Router.RandomSeason(season: vm.seasons[seasonIndex], index: seasonIndex)
+                    }
+                    router.tabSelection = 1
+                }
             }.foregroundColor(.black)
             Spacer()
-            Button("Drivers") {
-                router.listSelection = .drivers
-                router.tabSelection = 1
-            }.foregroundColor(.black)
-            Spacer()
+            if progressIsVisible {
+                ProgressView("Loading & Сhoosing")
+            }
         }
     }
 }

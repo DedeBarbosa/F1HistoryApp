@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct AboutScreen: View {
+    
+    @State var isModal: Bool = false
+    
     var body: some View {
-        Text("About")
+        Button("Open Modal") {
+            isModal = true
+        }.sheet(isPresented: $isModal) {
+            someModal()
+        }
+        Spacer()
+    }
+}
+
+struct someModal: View {
+    var body: some View {
+        Text("Hei! I should be modal")
     }
 }
 

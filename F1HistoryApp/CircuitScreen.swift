@@ -17,7 +17,6 @@ struct CircuitScreen: View {
     
     var body: some View {
         return VStack {
-            Text(circuit.circuitName ?? "")
             Map(coordinateRegion: $region)
         }
     }

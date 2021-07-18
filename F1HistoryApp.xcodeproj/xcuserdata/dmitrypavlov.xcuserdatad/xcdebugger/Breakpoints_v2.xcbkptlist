@@ -167,118 +167,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7AD96665-06DF-475B-BBC5-D70260838E75"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "F1HistoryApp/SeasonsScreen.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "7AD96665-06DF-475B-BBC5-D70260838E75 - c48277d722a3e5d4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "F1HistoryApp.SeasonsScreen.list.getter : some"
-                  moduleName = "F1HistoryApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "33">
-               </Location>
-               <Location
-                  uuid = "7AD96665-06DF-475B-BBC5-D70260838E75 - 66e0db85c580e44c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Networking.Season) -&gt; &lt;&lt;opaque return type of SwiftUI.View.environmentObject&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Combine.ObservableObject&gt;(&#x3c4;_1_0) -&gt; some&gt;&gt;.0 in F1HistoryApp.SeasonsScreen.list.getter : some"
-                  moduleName = "F1HistoryApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "56"
-                  endingLineNumber = "56"
-                  offsetFromSymbolStart = "62">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "F1HistoryApp/SeasonsScreen.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93 - a9a4fdcc95f4a387"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.StagesScreen&gt;&gt;, SwiftUI.Spacer, SwiftUI.ZStack&lt;UIComponents.NavPushButton&lt;SwiftUI.Image, F1HistoryApp.WebViewScreen&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.SeasonScreenCell.body.getter : some"
-                  moduleName = "F1HistoryApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "1168">
-               </Location>
-               <Location
-                  uuid = "1FEBA3A2-906F-40A9-ADFF-53689DEA2F93 - a9a4fdcc95f4a387"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(Swift.Optional&lt;UIComponents.NavPushButton&lt;SwiftUI.Text, F1HistoryApp.StagesScreen&gt;&gt;, SwiftUI.Spacer, SwiftUI.ZStack&lt;UIComponents.NavPushButton&lt;SwiftUI.Image, F1HistoryApp.WebViewScreen&gt;&gt;)&gt;&gt;, SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.TupleView&lt;(SwiftUI.Divider, SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;)&gt;&gt;)&gt; in F1HistoryApp.SeasonScreenCell.body.getter : some"
-                  moduleName = "F1HistoryApp"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/SeasonsScreen.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69"
-                  offsetFromSymbolStart = "4625">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B3C20C8D-C816-4031-BAD8-F18755D7DDBB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "F1HistoryApp/StagesScreen.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "loadItems()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "26E417EC-24A0-40EF-948D-730F460BBD2F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -290,6 +178,240 @@
             endingLineNumber = "53"
             landmarkName = "emojiNationalityFlag()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11F2B75B-B42A-4F2D-B7A6-F6094E502642"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/MainScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0AA59FD0-5F50-4E1D-881F-1F5317DE187D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/SeasonsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C4A08ACB-ECBC-4F43-BAEF-CA046C16B7CB"
+            shouldBeEnabled = "No"
+            condition = "activeLink"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/SeasonsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "Router"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - b91c4b106148352f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of F1HistoryApp.Router.randomSeason : Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 7abd4fff705bf418"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.randomSeason.getter : Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "177">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - d2a30f4f48869404"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.randomSeason.setter : Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "149">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 5c543294c0da5a80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.randomSeason.modify : Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - cf688bb40816db12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.randomSeason.modify : Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 35865a13cc49cfad"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.$randomSeason.getter : Combine.Published&lt;Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;&gt;.Publisher"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "110">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 35865a13cc49cfad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.$randomSeason.setter : Combine.Published&lt;Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;&gt;.Publisher"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "233">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 93c54b41bf783c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.$randomSeason.modify : Combine.Published&lt;Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;&gt;.Publisher"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - 5ed5a2c7f6f09c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.$randomSeason.modify : Combine.Published&lt;Swift.Optional&lt;F1HistoryApp.Router.RandomSeason&gt;&gt;.Publisher with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "FDF056FD-4300-44B8-A5A3-C094772B0A94 - f065584cd8fc1d93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "F1HistoryApp.Router.init() -&gt; F1HistoryApp.Router"
+                  moduleName = "F1HistoryApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dmitrypavlov/F1HistoryApp/F1HistoryApp/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "179">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C034412-F7A1-4215-9BC0-43F8D07AEBFB"
+            shouldBeEnabled = "No"
+            condition = "router.randomSeason?.season.season == item.season"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "F1HistoryApp/SeasonsScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -17,7 +17,7 @@ final class StagesScreenViewModel: ObservableObject {
     private(set) var offset = 0
     
     private var showBy = 0
-    private var maxItems = -1
+    private(set) var maxItems = -1
     private var year: String = ""
     
     init(with year: String) {
@@ -49,7 +49,11 @@ struct StagesScreen: View {
     @ObservedObject var viewModel: StagesScreenViewModel
     
     var body: some View {
-        list
+        if viewModel.offset == viewModel.maxItems {
+            list
+        } else {
+            ProgressView("loading...")
+        }
     }
     
     @State private var selection: String? = nil
@@ -69,39 +73,27 @@ struct StagesScreenCell: View {
     
     var body: some View {
         VStack(alignment: .center, spacing: .none) {
-            if let url = URL(string: item.url ?? "") {
-                HStack {
-                    if let circuit = item.circuit {
-                        let region = MKCoordinateRegion(
-                            center: CLLocationCoordinate2D(
-                                latitude: Double(circuit.location?.lat ?? "") ?? 55.5555555,
-                                longitude: Double(circuit.location?.long ?? "") ?? 55.5555555
-                            ),
-                            span: MKCoordinateSpan(
-                                latitudeDelta: 0.04,
-                                longitudeDelta: 0.04
-                            ))
-                        NavPushButton(destination: LazyView(CircuitScreen(
-                                                                circuit: circuit,
-                                                                region: region)), title: "Circuit info") {
-                            Text(item.circuit?.circuitName ?? "")
-                        }
-                    } else {
-                        Text(item.circuit?.circuitName ?? "")
-                    }
-                    Spacer()
-                    ZStack {
-                        NavPushButton(destination: WebViewScreen(title: item.raceName ?? "", url: url), title: "Wiki of \(item.raceName ?? "") - \(item.season ?? "")") {
-                            Image(systemName: "w.circle")
-                        }
-                    }
-                }
+            let name = item.circuit?.circuitName ?? ""
+            if let circuit = item.circuit {
+                let region = MKCoordinateRegion(
+                    center: CLLocationCoordinate2D(
+                        latitude: Double(circuit.location?.lat ?? "") ?? 55.5555555,
+                        longitude: Double(circuit.location?.long ?? "") ?? 55.5555555
+                    ),
+                    span: MKCoordinateSpan(
+                        latitudeDelta: 0.04,
+                        longitudeDelta: 0.04
+                    ))
+                NavigationLink(
+                    name,
+                    destination: LazyView(CircuitScreen(
+                                            circuit: circuit,
+                                            region: region))
+                        .navigationTitle(name))
             } else {
-                Text(item.raceName ?? "")
+                Text(name)
             }
-            if viewModel.isPageLoading && viewModel.races.last == item {
-                ProgressView("loading...")
-            }
+            
         }
         .onAppear() {
             if viewModel.races.last == item {
