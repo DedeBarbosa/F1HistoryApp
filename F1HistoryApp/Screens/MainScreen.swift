@@ -26,7 +26,7 @@ struct MainScreen: View {
                     }
                     router.tabSelection = 1
                 }
-            }.foregroundColor(.black)
+            }.foregroundColor(.appBlack)
             Spacer()
             if progressIsVisible {
                 ProgressView("Loading & Сhoosing")

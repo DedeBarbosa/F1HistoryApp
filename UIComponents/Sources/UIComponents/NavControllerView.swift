@@ -38,6 +38,7 @@ private struct Screen: Identifiable, Equatable {
     let title: String
     let nextScreen: AnyView
     
+    
     static func == (lhs: Screen, rhs: Screen) -> Bool {
         lhs.id == rhs.id
     }

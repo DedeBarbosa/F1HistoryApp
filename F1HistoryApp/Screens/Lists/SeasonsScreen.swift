@@ -104,7 +104,7 @@ struct SeasonScreenCell: View {
                 NavigationLink(destination: LazyView(StagesScreen(viewModel: viewModel)).navigationTitle("Stages of \(season)"), isActive: $activeLink) {
                     VStack {
                         Text(item.season ?? "no year")
-                            .foregroundColor(.black)
+                            .foregroundColor(.appBlack)
                         Divider()
                     }
                         
