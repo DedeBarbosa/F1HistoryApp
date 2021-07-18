@@ -37,7 +37,6 @@ struct ContentView: View {
                     Text("Main")
                 }
                 .tag(0)
-                NavigationStackView
                 NavigationView() {
                     LazyView(SeasonsScreen().navigationTitle("SeasonsList"))
                 }

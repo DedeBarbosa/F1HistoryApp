@@ -18,6 +18,17 @@ struct CircuitScreen: View {
     var body: some View {
         return VStack {
             Map(coordinateRegion: $region)
+            if let url = URL(string: circuit.url ?? "") {
+                ZStack {
+                    NavigationLink(
+                        destination: LazyView(WebViewScreen(title: circuit.circuitName ?? "no name", url: url))
+                            .navigationTitle("Wiki of \(circuit.circuitName ?? "no name")")) {
+                        Image(systemName: "w.circle")
+                            .font(.system(size: 40, weight: .regular))
+                            .foregroundColor(.appBlack)
+                    }
+                }.frame(height: 50)
+            }
         }
     }
 }
