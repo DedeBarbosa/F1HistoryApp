@@ -17,7 +17,7 @@ final class DriversListViewModel: ObservableObject {
     private(set) var offset = 0
     
     private var showBy = 30
-    private var maxItems = -1
+    private(set) var maxItems = -1
     
     init() {
         loadItems()
@@ -46,8 +46,13 @@ struct DriversScreen: View {
     @ObservedObject var viewModel = DriversListViewModel()
     
     var body: some View {
-        list
+        if viewModel.maxItems < 0 {
+            ProgressView("loading...")
+        } else {
+            list
+        }
     }
+    
     
     @State private var selection: String? = nil
     

@@ -17,6 +17,7 @@
 		0F894ABC2698C2BD00112270 /* AnyCodable in Frameworks */ = {isa = PBXBuildFile; productRef = 0F894ABB2698C2BD00112270 /* AnyCodable */; };
 		0F8D4A8E26985D670024B596 /* StagesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8D4A8D26985D670024B596 /* StagesScreen.swift */; };
 		0F8D4A952698644A0024B596 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = 0F8D4A942698644A0024B596 /* Networking */; };
+		0F914C1526A60A3600DA2D46 /* ListsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F914C1426A60A3600DA2D46 /* ListsScreen.swift */; };
 		0F9736E72695E3FA00E9BAF2 /* F1HistoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736E62695E3FA00E9BAF2 /* F1HistoryApp.swift */; };
 		0F9736E92695E3FA00E9BAF2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9736E82695E3FA00E9BAF2 /* ContentView.swift */; };
 		0F9736EB2695E3FD00E9BAF2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F9736EA2695E3FD00E9BAF2 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		0F60C3B2269625D300983507 /* f1Api.yaml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = f1Api.yaml; sourceTree = "<group>"; };
 		0F60C3B326962E3500983507 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		0F8D4A8D26985D670024B596 /* StagesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StagesScreen.swift; sourceTree = "<group>"; };
+		0F914C1426A60A3600DA2D46 /* ListsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsScreen.swift; sourceTree = "<group>"; };
 		0F9736E32695E3FA00E9BAF2 /* F1HistoryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = F1HistoryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F9736E62695E3FA00E9BAF2 /* F1HistoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F1HistoryApp.swift; sourceTree = "<group>"; };
 		0F9736E82695E3FA00E9BAF2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,8 +143,8 @@
 				0FA078EA26A4BD820079B1D7 /* Lists */,
 				0F9736FB2695E4EE00E9BAF2 /* AboutScreen.swift */,
 				0F410B4C2698A99000436CF8 /* DriverInfoScreen.swift */,
-				0F8D4A8D26985D670024B596 /* StagesScreen.swift */,
 				0F9736FD2695E4EE00E9BAF2 /* MainScreen.swift */,
+				0F914C1426A60A3600DA2D46 /* ListsScreen.swift */,
 				0F410B482698755500436CF8 /* CircuitScreen.swift */,
 			);
 			path = Screens;
@@ -151,6 +153,7 @@
 		0FA078EA26A4BD820079B1D7 /* Lists */ = {
 			isa = PBXGroup;
 			children = (
+				0F8D4A8D26985D670024B596 /* StagesScreen.swift */,
 				0F9736FC2695E4EE00E9BAF2 /* SeasonsScreen.swift */,
 				0F410B4A2698A7F700436CF8 /* DriversScreen.swift */,
 			);
@@ -239,6 +242,7 @@
 				0F8D4A8E26985D670024B596 /* StagesScreen.swift in Sources */,
 				0F410B492698755500436CF8 /* CircuitScreen.swift in Sources */,
 				0FA078E826A4BB9A0079B1D7 /* Colors.swift in Sources */,
+				0F914C1526A60A3600DA2D46 /* ListsScreen.swift in Sources */,
 				0F410B462698699100436CF8 /* AnyTransition.swift in Sources */,
 				0F9736E92695E3FA00E9BAF2 /* ContentView.swift in Sources */,
 				0F410B4D2698A99000436CF8 /* DriverInfoScreen.swift in Sources */,

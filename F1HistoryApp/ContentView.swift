@@ -37,9 +37,7 @@ struct ContentView: View {
                     Text("Main")
                 }
                 .tag(0)
-                NavigationView() {
-                    LazyView(SeasonsScreen().navigationTitle("SeasonsList"))
-                }
+                LazyView(ListsScreen())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Seasons List")

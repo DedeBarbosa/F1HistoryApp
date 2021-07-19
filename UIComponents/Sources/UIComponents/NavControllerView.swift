@@ -147,7 +147,7 @@ public struct NavControllerView<Content>: View where Content: View {
                         .font(.system(size: 24, weight: .bold))
                     Spacer()
                     NavPopButton(destination: .root) {
-                        Image(systemName: "house")
+                        Image(systemName: "list.bullet")
                             .font(.system(size: 24, weight: .bold))
                     }
                     .environmentObject(viewModel)
