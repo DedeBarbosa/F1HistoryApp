@@ -19,11 +19,7 @@ final class SeasonsListViewModel: ObservableObject {
     private var showBy = 30
     private(set) var maxItems = -1
     
-    init() {
-        loadItems()
-    }
-    
-    fileprivate func GetItems(_ callBack: (()->())? = nil) {
+    private func GetItems(_ callBack: (()->())? = nil) {
         SeasonsAPI.seasonsGet(limit: "\(showBy)", offset: "\(offset)") { data, err in
             self.seasons.append(contentsOf: data?.mRData?.seasonTable?.seasons ?? .init())
             self.maxItems = Int(data?.mRData?.total ?? "") ?? 0
@@ -65,6 +61,9 @@ struct SeasonsScreen: View {
     var body: some View {
         if viewModel.maxItems < 0 {
             ProgressView("loading...")
+                .onAppear {
+                    viewModel.loadItems()
+                }
         } else {
             list
         }

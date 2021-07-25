@@ -22,7 +22,6 @@ final class StagesScreenViewModel: ObservableObject {
     
     init(with year: String) {
         self.year = year
-        loadItems()
     }
     
     func loadItems() {
@@ -53,6 +52,9 @@ struct StagesScreen: View {
             list
         } else {
             ProgressView("loading...")
+                .onAppear {
+                    viewModel.loadItems()
+                }
         }
     }
     

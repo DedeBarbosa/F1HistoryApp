@@ -19,10 +19,6 @@ final class DriversListViewModel: ObservableObject {
     private var showBy = 30
     private(set) var maxItems = -1
     
-    init() {
-        loadItems()
-    }
-    
     func loadItems() {
         if isPageLoading {
             return
@@ -48,6 +44,9 @@ struct DriversScreen: View {
     var body: some View {
         if viewModel.maxItems < 0 {
             ProgressView("loading...")
+                .onAppear {
+                    viewModel.loadItems()
+                }
         } else {
             list
         }
